@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local database (recreated and seeded on boot)
+*.db
+*.db-journal
+*.db-wal
+*.sqlite3
+
+# Build output
+frontend/dist/
+frontend/.vite/
+
+# Environment / secrets
+.env
+.env.local
+backend/.env
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
