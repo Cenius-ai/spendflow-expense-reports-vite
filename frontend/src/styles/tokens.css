@@ -1,0 +1,84 @@
+/* Spendflow design tokens — Swiss / International Minimal, data archetype.
+   Committed palette (verbatim), one accent, zero radius, hairline rules. */
+
+:root {
+  /* palette */
+  --background: #f5fbff;
+  --foreground: #0b141b;
+  --card: #fcffff;
+  --card-foreground: #0b141b;
+  --primary: #13212d;
+  --on-primary: #ffffff;
+  --secondary: #e7eef3;
+  --on-secondary: #0b141b;
+  --muted: #e7eef3;
+  --muted-foreground: #5a656e;
+  --accent: #0074ca;
+  --accent-oklch: oklch(0.55 0.16 251);
+  --on-accent: #ffffff;
+  --destructive: #c9302d;
+  --on-destructive: #ffffff;
+  --border: #d9dfe4;
+  --ring: #0074ca;
+
+  /* status semantics (text + colour, never colour alone) */
+  --status-draft-bg: #e7eef3;
+  --status-draft-fg: #3f4a54;
+  --status-submitted-bg: #0074ca;
+  --status-submitted-fg: #ffffff;
+  --status-approved-bg: #e6f2ec;
+  --status-approved-fg: #1c6b46;
+  --status-rejected-bg: #fbe9e8;
+  --status-rejected-fg: #a8221f;
+  --status-reimbursed-bg: #13212d;
+  --status-reimbursed-fg: #ffffff;
+
+  /* chart series — hex only, never oklch() in a chart API */
+  --chart-1: #0074ca;
+  --chart-2: #13212d;
+  --chart-3: #d55e00;
+
+  /* type */
+  --font-heading: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-display: clamp(2.25rem, 5.5vw, 3.75rem);
+  --text-title: clamp(1.375rem, 2.6vw, 1.75rem);
+  --text-section: 1.0625rem;
+  --text-body: 1rem;
+  --text-meta: 0.8125rem;
+  --text-micro: 0.75rem;
+
+  /* spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* layout */
+  --rail: 260px;
+  --drawer: 480px;
+  --row-height: 44px;
+  --radius: 0;
+
+  --motion-quick: 120ms;
+  --motion-state: 200ms;
+  --motion-panel: 240ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
